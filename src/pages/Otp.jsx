@@ -5,8 +5,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { addDoc, collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../components/firebase';
-import { emailApiKey } from '../components/config';
-import { REACT_APP_SENDINBLUE_API_KEY } from '../components/config';
+const emailApiKey = "";
+const REACT_APP_SENDINBLUE_API_KEY = "";
 import checkEmailExists from '../utils/checkEmailExists';
 
 

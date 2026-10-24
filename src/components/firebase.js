@@ -3,10 +3,8 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
-import { fireBaseApiKey } from "./config";
-
 const firebaseConfig = {
-  apiKey: fireBaseApiKey,
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyCVR1-faoqsjvPl4OTrig-xaZ3J-iIhefE",
   authDomain: "blooddonnerapp-7ab93.firebaseapp.com",
   projectId: "blooddonnerapp-7ab93",
   storageBucket: "blooddonnerapp-7ab93.firebasestorage.app",
