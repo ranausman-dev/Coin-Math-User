@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "coinmath-project"
+  },
+  "targets": {
+    "coinmath-project": {
+      "hosting": {
+        "user": [
+          "coinmath-user"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

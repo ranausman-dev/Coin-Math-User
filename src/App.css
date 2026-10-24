@@ -1,0 +1,138 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    min-height: 100vh; 
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    background: #171717;
+}
+.no-border {
+    border: none;
+    box-shadow: none;
+}
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-in {
+    animation: slide-in-right 0.5s forwards;
+}
+.boxShadow{
+    box-shadow: 0 3px 20px #0052FD;
+    box-shadow: #0052FD 0px 5px 12px 2px, #0052FD 0px 0px 7px 7px;
+}
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #333;  
+ }
+.background{
+    background-image: url('../public/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    
+}
+.signinform{
+    height: 600px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 40px 35px;
+    overflow: hidden;
+}  
+ @media screen and (max-width:320px ) {
+    .signinform{
+        height: 630px;
+        width: 300px;
+        background: transparent;
+    }
+}
+@media screen and (max-width:375px ) {
+    .signinform{
+        height: 630px;
+        width: 300px;
+        background: transparent;
+    }
+}
+.signinform *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #171717; 
+}
+
+
+::placeholder{
+    color: #5F5F5F;
+    font-size: 12px;
+}
+.credit a{
+  text-decoration: none;
+  font-weight: 800;
+  color: #00c3e2;
+}
+  
+.credit {
+  margin: 10px;
+}
+.phone-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #363636;
+    border: 1px solid transparent;
+    color: white;
+    outline: none;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.phone-input:focus {
+    outline: none;
+    border-color: #CE9600;
+}
+
+.phone-input:hover {
+    outline: none;
+    border-color: #fff;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.spinner {
+    animation: spin 1s ease-in-out infinite;
+} 
