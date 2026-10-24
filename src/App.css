@@ -42,7 +42,7 @@ body{
     background: #333;  
  }
 .background{
-    background-image: url('../public/bg.jpg');
+    background-image: url('/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;

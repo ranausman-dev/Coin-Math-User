@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { LuCoins } from 'react-icons/lu';
-import banner from '../../public/banner.webp';
+const banner = '/banner.webp';
 import { updateDoc, doc, getDoc } from 'firebase/firestore';
 import { db } from '../components/firebase';
 import { ToastContainer, toast } from 'react-toastify';

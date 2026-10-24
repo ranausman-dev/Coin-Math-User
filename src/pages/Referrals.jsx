@@ -5,7 +5,7 @@ import { db } from '../components/firebase';
 import { IoCheckmarkCircleOutline, IoCopyOutline } from 'react-icons/io5';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import banner from '../../public/banner.webp';
+const banner = '/banner.webp';
 
 const Referrals = () => {
     const [totalReferrals, setTotalReferrals] = useState(0);

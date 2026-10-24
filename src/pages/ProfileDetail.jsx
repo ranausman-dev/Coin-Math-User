@@ -5,7 +5,7 @@ import { db, storage } from '../components/firebase';
 import { SiTicktick } from 'react-icons/si';
 import { LuLink } from 'react-icons/lu';
 import { FaImage } from 'react-icons/fa';
-import banner from '../../public/banner.webp';
+const banner = '/banner.webp';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

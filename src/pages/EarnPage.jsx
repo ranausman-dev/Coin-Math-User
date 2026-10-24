@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import banner from "../../public/banner.webp";
+const banner = "/banner.webp";
 import { FaArrowRight } from "react-icons/fa";
 import Card from "../components/Card";
 import fb from "../assets/images/facebook.png";

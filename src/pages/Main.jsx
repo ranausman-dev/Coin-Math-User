@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import banner from "../../public/banner.webp";
+const banner = "/banner.webp";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -14,7 +14,7 @@ import { db } from '../components/firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import GuideModal from '../components/modals/GuideModal'
 import { FaMediumM } from "react-icons/fa";
-import uniswap from "../../public/uniswap.png";
+const uniswap = "/uniswap.png";
 import BalanceModal from "../components/BalanceModal";
 import Fb from "../components/Fb";
 import { GiTwoCoins } from "react-icons/gi";

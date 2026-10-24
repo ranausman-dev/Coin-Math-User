@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../components/firebase';
-import banner from '../../public/banner.webp';
+const banner = '/banner.webp';
 import { FaImage } from 'react-icons/fa';
 import Spinner from '../components/Spinner';
 

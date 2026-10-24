@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import banner from '../../public/banner.webp';
-import rate from '../../public/rate.png';
+const banner = '/banner.webp';
+const rate = '/rate.png';
 import { db } from '../components/firebase';
 import { collection, doc, getDoc, getDocs, updateDoc } from 'firebase/firestore';
 import Spinner from '../components/Spinner';

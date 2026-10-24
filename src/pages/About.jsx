@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import banner from '../../public/banner.webp'
+const banner = '/banner.webp';
 import { useLocation } from 'react-router-dom';
 
 

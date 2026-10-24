@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db, storage } from '../components/firebase';
 import { FaImage } from 'react-icons/fa';
-import banner from '../../public/banner.webp';
+const banner = '/banner.webp';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
