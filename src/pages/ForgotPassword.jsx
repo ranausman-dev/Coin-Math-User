@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../components/firebase";
-import checkEmailExists from "../utils/checkEmailExists";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -18,30 +17,22 @@ const ForgotPassword = () => {
     try {
       if (!email) {
         toast.error("Please enter your email.");
-        setIsLoading(false);
         return;
       }
 
-      const existingUser = localStorage.getItem("user_email")?.toLowerCase();
-
-      if (existingUser !== email.toLowerCase()) {
-        toast.error("No user found with this email.");
-        return;
-      }
-      
-
-      const user = await checkEmailExists(email.toLowerCase());
-      if (user) {
-        await sendPasswordResetEmail(auth, email.toLowerCase());
-        toast.success("Reset link sent! Check your inbox.");
-        setTimeout(() => {
-          navigate("/login");
-        }, 5000);
-      } else {
-        toast.error("User with this email does not exist.");
-      }
+      await sendPasswordResetEmail(auth, email.toLowerCase().trim());
+      toast.success("Reset link sent! Check your inbox.");
+      setTimeout(() => {
+        navigate("/login");
+      }, 3000);
     } catch (error) {
-      toast.error(error.message);
+      if (error.code === "auth/user-not-found") {
+        toast.error("No user found with this email.");
+      } else if (error.code === "auth/invalid-email") {
+        toast.error("Invalid email address.");
+      } else {
+        toast.error(error.message);
+      }
     } finally {
       setIsLoading(false);
     }
